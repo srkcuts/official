@@ -216,8 +216,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- Swiper: Portfolio (mobile carousel fallback not needed, grid used) --------- */
 
-  /* ---------------- Newsletter / Contact form (demo only) ---------------- */
+  /* ---------------- Contact form -> WhatsApp ---------------- */
+  const waForm = document.getElementById('whatsappContactForm');
+  if (waForm) {
+    waForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('cf-name').value.trim();
+      const phone = document.getElementById('cf-phone').value.trim();
+      const email = document.getElementById('cf-email').value.trim();
+      const service = document.getElementById('cf-service').value;
+      const details = document.getElementById('cf-details').value.trim();
+
+      if (!name || !phone || !service || !details) return;
+
+      let msg = `Hi SRK Cuts! I'd like to enquire about a project.\n\n`;
+      msg += `Name: ${name}\n`;
+      msg += `Phone: ${phone}\n`;
+      if (email) msg += `Email: ${email}\n`;
+      msg += `Service: ${service}\n`;
+      msg += `Details: ${details}`;
+
+      window.open(`https://wa.me/919790800614?text=${encodeURIComponent(msg)}`, '_blank');
+
+      const btn = waForm.querySelector('button[type="submit"]');
+      const original = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Opening WhatsApp...';
+      setTimeout(() => { btn.innerHTML = original; waForm.reset(); }, 2200);
+    });
+  }
+
+  /* ---------------- Newsletter / other demo forms ---------------- */
   document.querySelectorAll('form').forEach(form => {
+    if (form.id === 'whatsappContactForm') return;
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"], .btn');
