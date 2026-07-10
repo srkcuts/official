@@ -194,6 +194,12 @@ section{
   font-size:19px;
   letter-spacing:0.5px;
 }
+.logo-img{
+  height:44px;
+  width:auto;
+  object-fit:contain;
+}
+.footer .logo-img{height:56px;}
 .logo .mark{
   width:38px;height:38px;
   border-radius:10px;
@@ -648,6 +654,51 @@ section{
 }
 .price-feats li:first-child{border-top:none;}
 .price-feats li i{color:var(--gold);font-size:12px;}
+
+/* ---------- Rate Cards ---------- */
+.rate-card-wrap{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+.rate-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius-md);
+  padding:34px;
+}
+.rate-card h3{
+  font-size:18px;
+  margin-bottom:22px;
+  display:flex;align-items:center;gap:12px;
+  color:var(--gold-light);
+}
+.rate-card h3 i{color:var(--gold);}
+.rate-list li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  font-size:14px;
+  color:var(--text-2);
+  padding:12px 0;
+  border-top:1px solid var(--border);
+}
+.rate-list li:first-child{border-top:none;}
+.rate-list li b{
+  color:var(--gold-light);
+  font-weight:700;
+  white-space:nowrap;
+}
+.rate-note{
+  margin-top:24px;
+  text-align:center;
+  font-size:12.5px;
+  color:var(--text-3);
+}
+@media(max-width:800px){
+  .rate-card-wrap{grid-template-columns:1fr;}
+}
 
 /* ---------- Why choose us ---------- */
 .why-grid{
