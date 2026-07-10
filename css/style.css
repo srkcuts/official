@@ -7,8 +7,8 @@
   --card:#111111;
   --card-2:#0c0c0c;
   --border:#2A2A2A;
-  --gold:#D4AF37;
-  --gold-light:#F4D03F;
+  --gold:#E8452B;
+  --gold-light:#FF8A3D;
   --white:#FFFFFF;
   --text-2:#B5B5B5;
   --text-3:#787878;
@@ -132,11 +132,11 @@ section{
 .btn-gold{
   background:linear-gradient(135deg,var(--gold-light),var(--gold));
   color:#0a0a0a;
-  box-shadow:0 8px 30px -8px rgba(212,175,55,.55);
+  box-shadow:0 8px 30px -8px rgba(232,69,43,.55);
 }
 .btn-gold:hover{
   transform:translateY(-3px);
-  box-shadow:0 14px 40px -6px rgba(212,175,55,.75);
+  box-shadow:0 14px 40px -6px rgba(232,69,43,.75);
 }
 .btn-ghost{
   background:rgba(255,255,255,.03);
@@ -146,13 +146,13 @@ section{
 }
 .btn-ghost:hover{
   border-color:var(--gold);
-  background:rgba(212,175,55,.08);
+  background:rgba(232,69,43,.08);
   transform:translateY(-3px);
 }
 .btn-outline-gold{
   border:1px solid var(--gold);
   color:var(--gold);
-  background:rgba(212,175,55,.05);
+  background:rgba(232,69,43,.05);
 }
 .btn-outline-gold:hover{
   background:var(--gold);
@@ -381,19 +381,19 @@ section{
 .service-card::before{
   content:'';
   position:absolute;inset:0;
-  background:radial-gradient(circle at 30% 0%, rgba(212,175,55,.12), transparent 60%);
+  background:radial-gradient(circle at 30% 0%, rgba(232,69,43,.12), transparent 60%);
   opacity:0;transition:opacity .4s ease;
 }
 .service-card:hover{
   transform:translateY(-8px);
-  border-color:rgba(212,175,55,.5);
+  border-color:rgba(232,69,43,.5);
 }
 .service-card:hover::before{opacity:1;}
 .service-icon{
   width:56px;height:56px;
   border-radius:14px;
-  background:linear-gradient(135deg,rgba(212,175,55,.18),rgba(212,175,55,.02));
-  border:1px solid rgba(212,175,55,.3);
+  background:linear-gradient(135deg,rgba(232,69,43,.18),rgba(232,69,43,.02));
+  border:1px solid rgba(232,69,43,.3);
   display:flex;align-items:center;justify-content:center;
   font-size:22px;color:var(--gold);
   margin-bottom:24px;
@@ -439,7 +439,7 @@ section{
 .stats-bar::before{
   content:'';
   position:absolute;inset:0;
-  background:radial-gradient(ellipse at 50% -20%, rgba(212,175,55,.14), transparent 60%);
+  background:radial-gradient(ellipse at 50% -20%, rgba(232,69,43,.14), transparent 60%);
 }
 .stat-item{
   text-align:center;
@@ -449,7 +449,7 @@ section{
 }
 .stat-icon{
   width:48px;height:48px;border-radius:50%;
-  border:1px solid rgba(212,175,55,.4);
+  border:1px solid rgba(232,69,43,.4);
   display:flex;align-items:center;justify-content:center;
   color:var(--gold);font-size:18px;
 }
@@ -514,7 +514,7 @@ section{
   position:absolute;top:50%;left:50%;
   transform:translate(-50%,-50%) scale(.7);
   width:64px;height:64px;border-radius:50%;
-  background:rgba(212,175,55,.15);
+  background:rgba(232,69,43,.15);
   border:1px solid var(--gold);
   backdrop-filter:blur(6px);
   display:flex;align-items:center;justify-content:center;
@@ -580,7 +580,7 @@ section{
   border:1px solid var(--border);
 }
 .ba-tag.before{left:20px;}
-.ba-tag.after{right:20px;color:var(--gold-light);border-color:rgba(212,175,55,.4);}
+.ba-tag.after{right:20px;color:var(--gold-light);border-color:rgba(232,69,43,.4);}
 
 /* ---------- Testimonials ---------- */
 .testi-card{
@@ -624,7 +624,7 @@ section{
 }
 .price-card:hover{transform:translateY(-8px);}
 .price-card.featured{
-  background:linear-gradient(160deg,#1a1608,var(--card) 55%);
+  background:linear-gradient(160deg,#1f0f0a,var(--card) 55%);
   border-color:var(--gold);
   transform:scale(1.03);
 }
@@ -714,11 +714,11 @@ section{
   background:var(--card-2);
   transition:.4s var(--ease);
 }
-.why-item:hover{border-color:rgba(212,175,55,.4);transform:translateY(-4px);}
+.why-item:hover{border-color:rgba(232,69,43,.4);transform:translateY(-4px);}
 .why-icon{
   width:46px;height:46px;border-radius:12px;flex-shrink:0;
-  background:rgba(212,175,55,.1);
-  border:1px solid rgba(212,175,55,.3);
+  background:rgba(232,69,43,.1);
+  border:1px solid rgba(232,69,43,.3);
   display:flex;align-items:center;justify-content:center;
   color:var(--gold);font-size:18px;
 }
@@ -796,7 +796,7 @@ section{
   border-radius:var(--radius-lg);
   border:1px solid var(--border);
   padding:60px;
-  background:radial-gradient(ellipse at 50% 0%, rgba(212,175,55,.12), var(--card) 70%);
+  background:radial-gradient(ellipse at 50% 0%, rgba(232,69,43,.12), var(--card) 70%);
   text-align:center;
 }
 .newsletter h2{font-size:clamp(26px,3.5vw,38px);margin-bottom:14px;}
@@ -937,7 +937,7 @@ section{
   position:fixed;
   width:420px;height:420px;
   border-radius:50%;
-  background:radial-gradient(circle, rgba(212,175,55,.10), transparent 70%);
+  background:radial-gradient(circle, rgba(232,69,43,.10), transparent 70%);
   pointer-events:none;
   z-index:1;
   transform:translate(-50%,-50%);
