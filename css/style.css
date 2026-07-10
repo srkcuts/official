@@ -1007,3 +1007,148 @@ section{
   position:absolute;top:26px;right:30px;
   font-size:26px;color:var(--white);
 }
+
+/* ============================================================
+   LIGHT THEME
+   Toggle via [data-theme="light"] on <html>.
+   Hero stays a dark cinematic panel in both themes (it's a photo
+   backdrop, not the page surface) — everything else goes light.
+   ============================================================ */
+
+:root[data-theme="light"]{
+  --bg:#FAF8F4;
+  --card:#FFFFFF;
+  --card-2:#F5F1EA;
+  --border:#E7E0D3;
+  --white:#17130F;
+  --text-2:#5B5548;
+  --text-3:#928C7D;
+}
+
+/* subtle page shadow/definition since white-on-white loses borders */
+[data-theme="light"] .service-card,
+[data-theme="light"] .price-card,
+[data-theme="light"] .testi-card,
+[data-theme="light"] .blog-card,
+[data-theme="light"] .rate-card,
+[data-theme="light"] .why-item,
+[data-theme="light"] .tool-card,
+[data-theme="light"] .contact-form,
+[data-theme="light"] .stats-bar,
+[data-theme="light"] .newsletter{
+  box-shadow:0 4px 24px rgba(23,19,15,.05);
+}
+
+/* navbar: transparent state still sits over the dark hero photo,
+   so keep its text light until the bar goes opaque on scroll */
+[data-theme="light"] .navbar.scrolled{
+  background:rgba(250,248,244,.85);
+}
+[data-theme="light"] .navbar:not(.scrolled) .nav-links a{
+  color:rgba(255,255,255,.85);
+}
+[data-theme="light"] .navbar:not(.scrolled) .nav-links a:hover,
+[data-theme="light"] .navbar:not(.scrolled) .nav-links a.active{
+  color:#fff;
+}
+[data-theme="light"] .navbar:not(.scrolled) .nav-call{
+  color:rgba(255,255,255,.85);
+  border-color:rgba(255,255,255,.35);
+}
+[data-theme="light"] .navbar:not(.scrolled) .hamburger span{
+  background:#fff;
+}
+[data-theme="light"] .navbar:not(.scrolled) .theme-toggle{
+  color:rgba(255,255,255,.9);
+  border-color:rgba(255,255,255,.35);
+}
+
+/* hero text always stays light — it's printed over a photo, not the bg */
+[data-theme="light"] .hero-content,
+[data-theme="light"] .hero-scroll{
+  color:#fff;
+}
+[data-theme="light"] .hero-sub{
+  color:rgba(255,255,255,.78);
+}
+[data-theme="light"] .hero-sub b{
+  color:#fff;
+}
+
+/* ghost surfaces: darken instead of lighten */
+[data-theme="light"] .btn-ghost{
+  background:rgba(23,19,15,.03);
+  border-color:rgba(23,19,15,.14);
+  color:var(--white);
+}
+[data-theme="light"] .btn-ghost:hover{
+  background:rgba(232,69,43,.08);
+  border-color:var(--gold);
+}
+[data-theme="light"] .newsletter-form input,
+[data-theme="light"] .field input,
+[data-theme="light"] .field select,
+[data-theme="light"] .field textarea{
+  background:rgba(23,19,15,.02);
+  border-color:var(--border);
+}
+
+/* footer + mobile chrome */
+[data-theme="light"] .footer{
+  background:#F2ECE1;
+  border-top-color:var(--border);
+}
+[data-theme="light"] .footer h5,
+[data-theme="light"] .footer-bottom span{
+  color:var(--white);
+}
+[data-theme="light"] .mobile-nav{
+  background:rgba(255,255,255,.92);
+}
+[data-theme="light"] .mobile-drawer{
+  background:rgba(255,255,255,.98);
+}
+
+/* map + featured card tint */
+[data-theme="light"] .contact-map{
+  filter:grayscale(.25) contrast(1);
+}
+[data-theme="light"] .price-card.featured{
+  background:linear-gradient(160deg,#FFF1EA,var(--card) 55%);
+}
+
+/* scrollbar */
+[data-theme="light"] ::-webkit-scrollbar-track{background:#EEE8DD;}
+[data-theme="light"] ::selection{color:#fff;}
+
+/* clients marquee logos read better slightly darker on light bg */
+[data-theme="light"] .clients-track .client-name{
+  color:var(--text-2);
+  opacity:.8;
+}
+
+/* ---------- Theme toggle button ---------- */
+.theme-toggle{
+  width:42px;height:42px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--text-2);
+  font-size:15px;
+  flex-shrink:0;
+  transition:.3s ease;
+}
+.theme-toggle:hover{border-color:var(--gold);color:var(--gold);}
+.mobile-drawer .theme-toggle{
+  width:auto;height:auto;border:none;
+  font-size:15px;color:var(--text-2);
+  display:flex;align-items:center;gap:8px;
+}
+
+/* smooth theme-switch transition */
+body,.navbar,.footer,.service-card,.price-card,.testi-card,.blog-card,
+.rate-card,.why-item,.tool-card,.contact-form,.stats-bar,.newsletter,
+.mobile-nav,.mobile-drawer,.btn-ghost,.field input,.field select,
+.field textarea,.newsletter-form input,.theme-toggle{
+  transition:background-color .4s ease, border-color .4s ease, color .4s ease, box-shadow .4s ease;
+}

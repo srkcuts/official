@@ -6,6 +6,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
+  /* ---------------- Theme toggle (dark / light) ---------------- */
+  const root = document.documentElement;
+  const themeButtons = document.querySelectorAll('.theme-toggle');
+
+  const paintToggleIcons = () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    themeButtons.forEach(btn => {
+      const icon = btn.querySelector('i');
+      const label = btn.querySelector('span');
+      if (icon) icon.className = isLight ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+      if (label) label.textContent = isLight ? 'Dark Mode' : 'Light Mode';
+    });
+  };
+
+  const applyTheme = (theme) => {
+    root.setAttribute('data-theme', theme);
+    paintToggleIcons();
+    try { localStorage.setItem('srk-theme', theme); } catch (e) {}
+  };
+
+  let savedTheme = 'dark';
+  try { savedTheme = localStorage.getItem('srk-theme') || 'dark'; } catch (e) {}
+  applyTheme(savedTheme);
+
+  themeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      applyTheme(next);
+    });
+  });
+
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------------- Preloader-ish hero intro ---------------- */
