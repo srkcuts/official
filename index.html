@@ -122,136 +122,160 @@
 </div>
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="home">
-  <div class="hero-bg">
-    <img src="https://picsum.photos/seed/srkcuts-editor-studio/1920/1080" alt="Professional video editor working in a cinematic studio">
+<section class="hero hero-v2" id="home">
+  <div class="hero-blobs">
+    <span class="blob blob-pink"></span>
+    <span class="blob blob-purple"></span>
+    <span class="blob blob-orange"></span>
   </div>
-  <div class="hero-particles" id="particles"></div>
 
   <div class="container hero-content">
-    <div class="eyebrow hero-eyebrow">Creative &middot; Modern &middot; Professional</div>
+    <div class="hero-badge"><i class="fa-solid fa-star"></i> Professional Editing Services</div>
     <h1>
       <span>WE CREATE</span>
       <span>CONTENT</span>
       <span class="highlight">THAT SELLS</span>
     </h1>
+    <div class="hero-underline"></div>
     <p class="hero-sub">
-      A premium creative agency crafting <b>cinematic video</b>, <b>photography</b> and
-      <b>AI-powered content</b> that turns audiences into customers — video editing,
-      photography, social media marketing, AI content, branding &amp; website development.
+      High quality editing, cinematic storytelling, and creative visuals that elevate your brand and engage your audience.
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn btn-gold magnetic"><i class="fa-regular fa-calendar-check"></i> Book Free Consultation</a>
-      <a href="https://wa.me/919790800614" class="btn btn-ghost magnetic" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Now</a>
-      <a href="#portfolio" class="btn btn-outline-gold magnetic"><i class="fa-regular fa-images"></i> View Portfolio</a>
+      <a href="https://wa.me/919790800614" class="btn btn-outline-green magnetic" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Now</a>
+      <a href="#portfolio" class="btn btn-outline-purple magnetic"><i class="fa-solid fa-play"></i> View Portfolio</a>
     </div>
   </div>
 
-  <div class="hero-scroll">
-    <span>Scroll Down</span>
-    <div class="scroll-line"></div>
+  <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,64 C240,120 480,0 720,32 C960,64 1200,120 1440,64 L1440,120 L0,120 Z" fill="url(#waveGrad)"/>
+    <defs>
+      <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#FF3D81"/>
+        <stop offset="50%" stop-color="#FF8A00"/>
+        <stop offset="100%" stop-color="#FFC93C"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</section>
+
+<!-- ============ STATS ============ -->
+<section id="about" style="padding:0;">
+  <div class="container">
+    <div class="stats-bar stats-v2 reveal">
+      <div class="stat-item">
+        <div class="stat-icon stat-pink"><i class="fa-solid fa-clapperboard"></i></div>
+        <div>
+          <div class="stat-num" data-count="150">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon stat-orange"><i class="fa-solid fa-users"></i></div>
+        <div>
+          <div class="stat-num" data-count="80">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon stat-blue"><i class="fa-solid fa-trophy"></i></div>
+        <div>
+          <div class="stat-num" data-count="5">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon stat-purple"><i class="fa-solid fa-photo-film"></i></div>
+        <div>
+          <div class="stat-num" data-count="500">0</div>
+          <div class="stat-label">Videos Edited</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ============ SERVICES ============ -->
 <section id="services">
   <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">Our Services</div>
-        <h2 class="section-title">What We <span class="text-gold">Do</span></h2>
-        <p class="section-sub">Full-funnel creative — from the first frame to the final click.</p>
+    <div class="section-head reveal" style="justify-content:center;text-align:center;">
+      <div style="width:100%;">
+        <div class="eyebrow" style="justify-content:center;color:#FF3D81;">&bull; Our Services &bull;</div>
+        <h2 class="section-title">WHAT WE <span class="text-gradient-multi">DO</span></h2>
       </div>
-      <a href="#contact" class="btn btn-ghost magnetic">View All Services <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
-    <div class="services-grid reveal-stagger">
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-clapperboard"></i></div>
+    <div class="services-grid services-v2 reveal-stagger">
+      <div class="service-card service-card-v2">
+        <div class="service-icon service-icon-pink"><i class="fa-solid fa-clapperboard"></i></div>
         <h3>Video Editing</h3>
         <ul>
-          <li>Wedding Films</li>
-          <li>Birthday &amp; Events</li>
-          <li>Corporate Videos</li>
-          <li>YouTube &amp; Reels</li>
+          <li>Wedding</li>
+          <li>Corporate</li>
+          <li>YouTube</li>
+          <li>Reels &amp; Shorts</li>
         </ul>
-        <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="service-link service-link-pink">Learn More <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-camera"></i></div>
+      <div class="service-card service-card-v2">
+        <div class="service-icon service-icon-orange"><i class="fa-solid fa-camera"></i></div>
         <h3>Photography</h3>
         <ul>
-          <li>Wedding Photography</li>
-          <li>Engagement Shoots</li>
-          <li>Baby Shoots</li>
-          <li>Product Shoots</li>
+          <li>Wedding</li>
+          <li>Engagement</li>
+          <li>Baby Shoot</li>
+          <li>Product Shoot</li>
         </ul>
-        <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="service-link service-link-orange">Learn More <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-hashtag"></i></div>
-        <h3>Social Media Management</h3>
+      <div class="service-card service-card-v2">
+        <div class="service-icon service-icon-blue"><i class="fa-solid fa-video"></i></div>
+        <h3>Videography</h3>
+        <ul>
+          <li>Wedding Film</li>
+          <li>Event Coverage</li>
+          <li>Corporate Film</li>
+          <li>Documentary</li>
+        </ul>
+        <a href="#contact" class="service-link service-link-blue">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card service-card-v2">
+        <div class="service-icon service-icon-purple"><i class="fa-solid fa-bullhorn"></i></div>
+        <h3>Social Media Marketing</h3>
         <ul>
           <li>Instagram Management</li>
-          <li>Facebook Page Growth</li>
-          <li>Daily Content Posts</li>
-          <li>Meta Ads Management</li>
+          <li>Facebook Page</li>
+          <li>Content Creation</li>
+          <li>Ads Management</li>
         </ul>
-        <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="service-link service-link-purple">Learn More <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+      <div class="service-card service-card-v2">
+        <div class="service-icon service-icon-green"><i class="fa-solid fa-robot"></i></div>
         <h3>AI Services</h3>
         <ul>
-          <li>AI Avatar Videos</li>
-          <li>AI Voice &amp; Image</li>
-          <li>AI Ads Creation</li>
-          <li>AI Product Videos</li>
+          <li>AI Avatar Video</li>
+          <li>AI Voice</li>
+          <li>AI Image</li>
+          <li>AI Ads</li>
         </ul>
-        <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="service-link service-link-green">Learn More <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+      <div class="service-card service-card-v2">
+        <div class="service-icon service-icon-red"><i class="fa-solid fa-globe"></i></div>
         <h3>Website Development</h3>
         <ul>
-          <li>Business Websites</li>
-          <li>Church Websites</li>
-          <li>Portfolio Websites</li>
-          <li>Landing Pages</li>
+          <li>Business Website</li>
+          <li>Church Website</li>
+          <li>Portfolio Website</li>
+          <li>Landing Page</li>
         </ul>
-        <a href="#contact" class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ STATS ============ -->
-<section id="about" style="padding-top:0;">
-  <div class="container">
-    <div class="stats-bar reveal">
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
-        <div class="stat-num" data-count="150">0</div>
-        <div class="stat-label">Projects Completed</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fa-solid fa-face-smile"></i></div>
-        <div class="stat-num" data-count="80">0</div>
-        <div class="stat-label">Happy Clients</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
-        <div class="stat-num" data-count="5">0</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fa-solid fa-play"></i></div>
-        <div class="stat-num" data-count="500">0</div>
-        <div class="stat-label">Videos Edited</div>
+        <a href="#contact" class="service-link service-link-red">Learn More <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </div>

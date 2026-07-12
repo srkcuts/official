@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     try { localStorage.setItem('srk-theme', theme); } catch (e) {}
   };
 
-  let savedTheme = 'dark';
-  try { savedTheme = localStorage.getItem('srk-theme') || 'dark'; } catch (e) {}
+  let savedTheme = 'light';
+  try { savedTheme = localStorage.getItem('srk-theme') || 'light'; } catch (e) {}
   applyTheme(savedTheme);
 
   themeButtons.forEach(btn => {
@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------------- Preloader-ish hero intro ---------------- */
   const heroTl = gsap.timeline({defaults:{ease:'power3.out'}});
   heroTl
-    .from('.hero-eyebrow', {y:20, opacity:0, duration:.8}, 0.1)
+    .from('.hero-badge', {y:20, opacity:0, duration:.8}, 0.1)
     .from('.hero h1 span', {y:60, opacity:0, duration:1, stagger:.12}, 0.15)
+    .from('.hero-underline', {scaleX:0, opacity:0, duration:.6, transformOrigin:'left'}, 0.6)
     .from('.hero-sub', {y:30, opacity:0, duration:.9}, 0.65)
-    .from('.hero-actions .magnetic', {y:24, opacity:0, duration:.7, stagger:.1}, 0.8)
-    .from('.hero-scroll', {opacity:0, duration:1}, 1.1);
+    .from('.hero-actions .magnetic', {y:24, opacity:0, duration:.7, stagger:.1}, 0.8);
 
   /* ---------------- Navbar scroll state ---------------- */
   const navbar = document.querySelector('.navbar');
@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal, .reveal-stagger *').forEach(el => { el.style.opacity=1; el.style.transform='none'; });
   }
 
-  /* ---------------- Parallax hero image ---------------- */
+  /* ---------------- Parallax hero blobs ---------------- */
   if (!prefersReduced) {
-    gsap.to('.hero-bg img', {
+    gsap.to('.hero-blobs', {
       yPercent: 14, ease:'none',
       scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true }
     });
