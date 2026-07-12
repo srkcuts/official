@@ -101,10 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal, .reveal-stagger *').forEach(el => { el.style.opacity=1; el.style.transform='none'; });
   }
 
-  /* ---------------- Parallax hero blobs ---------------- */
+  /* ---------------- Parallax hero photo + blobs ---------------- */
   if (!prefersReduced) {
+    gsap.to('.hero-bg img', {
+      yPercent: 12, ease:'none',
+      scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true }
+    });
     gsap.to('.hero-blobs', {
-      yPercent: 14, ease:'none',
+      yPercent: 18, ease:'none',
       scrollTrigger:{ trigger:'.hero', start:'top top', end:'bottom top', scrub:true }
     });
   }
